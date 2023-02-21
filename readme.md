@@ -8,10 +8,14 @@ A split keyboard with 3x6 vertically staggered keys and 4 thumb keys.
 Make example for this keyboard (after setting up your build environment):
 
     qmk compile -kb alu44/rev1 -km default
-
 Flashing example for this keyboard:
+right side:
 
-    qmk flash -kb alu44/rev1 -km default
+    qmk flash -kb alu44/rev1 -km default -bl dfu-split-right
+
+left side:
+
+    qmk flash -kb alu44/rev1 -km default -bl dfu-split-left
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 

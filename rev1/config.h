@@ -24,6 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS { B6, B2, B3, B1 }
 #define MATRIX_COL_PINS { F5, B5, B4, E6, D7, C6 }
 #define SOFT_SERIAL_PIN D1
+#define EE_HANDS
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
