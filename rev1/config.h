@@ -17,20 +17,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID 0x5946 // YF
-#define PRODUCT_ID 0x0001
-#define DEVICE_VER 0x0001
-#define MANUFACTURER heieisch
-#define PRODUCT prototype1
 
 /* key matrix size */
 #define MATRIX_ROWS 8
 #define MATRIX_COLS 6
 #define MATRIX_ROW_PINS { B6, B2, B3, B1 }
 #define MATRIX_COL_PINS { F5, B5, B4, E6, D7, C6 }
-#define UNUSED_PINS
-#define DIODE_DIRECTION COL2ROW
 #define SOFT_SERIAL_PIN D1
 
 /* define if matrix has ghost */

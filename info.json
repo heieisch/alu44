@@ -1,0 +1,11 @@
+{
+  "keyboard_name": "alu44",
+  "manufacturer": "heieisch",
+  "maintainer": "heieisch",
+  "url": "github.com/heieisch/alu44",
+  "usb": {
+    "device_version": "0.0.1",
+    "vid": "0xC1ED",
+    "pid": "0x23B0"
+  }
+}
