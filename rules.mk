@@ -2,7 +2,7 @@
 MCU = atmega32u4
 
 # Bootloader selection
-BOOTLOADER = caterina
+BOOTLOADER = atmel-dfu
 
 # Build Options
 #   change yes to no to disable
@@ -17,4 +17,4 @@ BACKLIGHT_ENABLE = no      # Enable keyboard backlight functionality
 AUDIO_ENABLE = no           # Audio output
 RGBLIGHT_ENABLE = no       # Enable WS2812 RGB underlight. 
 
-DEFAULT_FOLDER = heiesch/prot44/rev1
+DEFAULT_FOLDER = heieisch/alu44/rev1
