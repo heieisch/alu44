@@ -36,10 +36,17 @@ enum layer_number {
 #define KC_G_ESC MT(KC_LEFT_GUI,KC_ESC)       // esc
 #define KC_CAD LALT(LCTL(KC_DEL))
 
+// unicode for german umlauts
+#define DE_AE UC(0x00E4)
+#define DE_OE UC(0x00F6)
+#define DE_UE UC(0x00FC)
+#define DE_SS UC(0x00DF)
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
     //,--------+--------+---------+--------+---------+--------.   ,--------+---------+--------+---------+--------+--------.
-       _______ , KC_Q   , KC_W    , KC_F   , KC_P    , KC_B   ,     KC_J   , KC_L    , KC_U   , KC_Y    , KC_SCLN, KC_MINS,
+       _______ ,KC_Q   , KC_W    , KC_F   , KC_P    , KC_B   ,     KC_J   , KC_L    , KC_U   , KC_Y    , KC_SCLN, KC_MINS,
     //|--------+--------+---------+--------+---------+--------|   |--------+---------+--------+---------+--------+--------|
        KC_TAB , KC_A   , KC_R    , KC_S   , KC_T    , KC_G   ,     KC_M   , KC_N    , KC_E   , KC_I    , KC_O   , KC_QUOT,
     //|--------+--------+---------+--------+---------+--------|   |--------+---------+--------+---------+--------+--------|
@@ -75,7 +82,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ADJUST] = LAYOUT(
     //,--------+--------+--------+--------+--------+--------.   ,--------+--------+--------+--------+--------+--------.
-        _______, KC_F11 , KC_F12 , _______, _______, _______,     _______, _______, _______, _______, _______, _______,
+        _______, KC_F11 , KC_F12 , _______, _______, _______,     DE_AE  , DE_OE  , DE_UE  , DE_SS  , _______, _______,
     //|--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------|
         KC_SLEP, KC_VOLD, KC_VOLU, KC_MPLY, KC_MUTE, KC_MSTP,     KC_MRWD, KC_MPRV, KC_MNXT, KC_MFFD, _______, KC_CAD ,
     //|--------+--------+--------+--------+--------+--------|   |--------+--------+--------+--------+--------+--------|
