@@ -36,12 +36,32 @@ enum layer_number {
 #define KC_G_ESC MT(KC_LEFT_GUI,KC_ESC)       // esc
 #define KC_CAD LALT(LCTL(KC_DEL))
 
-// unicode for german umlauts
-#define DE_AE UC(0x00E4)
-#define DE_OE UC(0x00F6)
-#define DE_UE UC(0x00FC)
-#define DE_SS UC(0x00DF)
+enum unicode_names {
+    DE_AE_small,
+    DE_AE_big,
+    DE_OE_small,
+    DE_OE_big,
+    DE_UE_small,
+    DE_UE_big,
+    DE_SS_small,
+};
 
+const uint32_t unicode_map[] PROGMEM = {
+    [DE_AE_small]  = 0x00E4, // ä
+    [DE_AE_big]  = 0x00C4, // Ä
+    [DE_OE_small]  = 0x00F6, // ö
+    [DE_OE_big]  = 0x00D6, // Ö
+    [DE_UE_small]  = 0x00FC, // ü
+    [DE_UE_big]  = 0x00DC, // Ü
+    [DE_SS_small]  = 0x00DF, // ß
+    
+};
+
+
+#define DE_AE XP(DE_AE_small, DE_AE_big)
+#define DE_OE XP(DE_OE_small, DE_OE_big)
+#define DE_UE XP(DE_UE_small, DE_UE_big)
+#define DE_SS XP(DE_SS_small, DE_SS_small)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_QWERTY] = LAYOUT(
